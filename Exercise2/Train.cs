@@ -4,7 +4,7 @@ using System.Text;
 
 namespace Exercise2
 {
-    struct Train
+    struct Train : IComparable<Train>
     {
         public string Destinastion { get; private set; }
         public string Number { get; private set; }
@@ -20,6 +20,11 @@ namespace Exercise2
             return $"Номер поезда: {Number}\n" +
                    $"Пункт назначения: {Destinastion}\n" +
                    $"Дата отправления: {DepartureAt:F}\n";
+        }
+
+        public int CompareTo(Train obj)
+        {
+            return Number.CompareTo(obj.Number);
         }
     }
 }

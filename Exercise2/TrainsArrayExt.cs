@@ -24,21 +24,5 @@ namespace Exercise2
             }
             return result;
         }
-
-        public static void SortAsc(this Train[] trains)
-        {
-            for (int i = 1 ; i < trains.Length; i++)
-            {
-                for (int j = 1; j < trains.Length; j++)
-                {
-                    if (trains[j].Number.CompareTo(trains[j - 1].Number) < 1)
-                    {
-                        Train temp = trains[j];
-                        trains[j] = trains[j - 1];
-                        trains[j - 1] = temp;
-                    }
-                }
-            }
-        }
     }
 }

@@ -19,7 +19,7 @@ namespace Exercise2
                 trains[i] = TrainCreator.Create();
             }
 
-            trains.SortAsc();
+            Array.Sort(trains);
 
             Console.WriteLine("Данные о поездах, сортированные по номеру поезда:");
 
